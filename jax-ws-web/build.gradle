@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+project.webAppDirName = 'WebContent'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
+}

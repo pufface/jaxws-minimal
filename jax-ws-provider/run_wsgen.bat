@@ -1,1 +1,1 @@
-wsgen -cp build\classes\main -d build\classes\main -s src\main\java -r src\main\resources -verbose -keep -wsdl sk.fillo.ws.Service
+wsgen -cp build/classes/main -s src/main/java -r wsdl -verbose -keep -wsdl -Xnocompile -inlineSchemas sk.fillo.ws.Service

@@ -1,5 +1,5 @@
 
-package sk.fillo.ws.jaxws;
+package sk.fillo.ws.provider.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "addNumbers", namespace = "http://ws.fillo.sk/")
+@XmlRootElement(name = "addNumbers", namespace = "http://provider.ws.fillo.sk/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "addNumbers", namespace = "http://ws.fillo.sk/", propOrder = {
+@XmlType(name = "addNumbers", namespace = "http://provider.ws.fillo.sk/", propOrder = {
     "arg0",
     "arg1"
 })

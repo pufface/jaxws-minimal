@@ -1,4 +1,4 @@
-package sk.fillo.ws;
+package sk.fillo.ws.provider;
 
 import javax.xml.ws.Endpoint;
 

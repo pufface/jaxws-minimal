@@ -1,0 +1,1 @@
+wsimport -p sk.fillo.ws.consumer.def -s src/main/java -wsdllocation http://localhost/wsdl/ServiceService.wsdl -catalog src/main/resources/META-INF/jax-ws-catalog.xml -Xnocompile src/main/resources/META-INF/wsdl/ServiceService.wsdl  

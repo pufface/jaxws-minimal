@@ -1,12 +1,15 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+project.webAppDirName = 'WebContent'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'sk.fillo.ws.App'
+		attributes 'Main-Class': 'sk.fillo.ws.provider.App'
 	}
 	from {
 		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
@@ -19,4 +22,5 @@ repositories {
 }
 
 dependencies {
+	compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
 }

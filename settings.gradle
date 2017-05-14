@@ -1,3 +1,2 @@
 include 'jax-ws-consumer'
 include 'jax-ws-provider'
-include 'jax-ws-web'

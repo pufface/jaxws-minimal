@@ -4,12 +4,12 @@ apply plugin: 'eclipse-wtp'
 
 project.webAppDirName = 'WebContent'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'sk.fillo.ws.provider.App'
+		attributes 'Main-Class': 'sk.fillo.ws.provider.Provider'
 	}
 	from {
 		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

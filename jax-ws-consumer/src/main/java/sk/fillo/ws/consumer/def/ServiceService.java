@@ -16,14 +16,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ServiceService", targetNamespace = "http://ws.fillo.sk/", wsdlLocation = "http://localhost/wsdl/ServiceService.wsdl")
+@WebServiceClient(name = "ServiceService", targetNamespace = "http://provider.ws.fillo.sk/", wsdlLocation = "http://localhost/wsdl/ServiceService.wsdl")
 public class ServiceService
     extends javax.xml.ws.Service
 {
 
     private final static URL SERVICESERVICE_WSDL_LOCATION;
     private final static WebServiceException SERVICESERVICE_EXCEPTION;
-    private final static QName SERVICESERVICE_QNAME = new QName("http://ws.fillo.sk/", "ServiceService");
+    private final static QName SERVICESERVICE_QNAME = new QName("http://provider.ws.fillo.sk/", "ServiceService");
 
     static {
         URL url = null;
@@ -68,7 +68,7 @@ public class ServiceService
      */
     @WebEndpoint(name = "ServicePort")
     public sk.fillo.ws.consumer.def.Service getServicePort() {
-        return super.getPort(new QName("http://ws.fillo.sk/", "ServicePort"), Service.class);
+        return super.getPort(new QName("http://provider.ws.fillo.sk/", "ServicePort"), Service.class);
     }
 
     /**
@@ -80,7 +80,7 @@ public class ServiceService
      */
     @WebEndpoint(name = "ServicePort")
     public sk.fillo.ws.consumer.def.Service getServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://ws.fillo.sk/", "ServicePort"), Service.class, features);
+        return super.getPort(new QName("http://provider.ws.fillo.sk/", "ServicePort"), Service.class, features);
     }
 
     private static URL __getWsdlLocation() {

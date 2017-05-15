@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "Service", targetNamespace = "http://ws.fillo.sk/")
+@WebService(name = "Service", targetNamespace = "http://provider.ws.fillo.sk/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -33,9 +33,9 @@ public interface Service {
      */
     @WebMethod(action = "addNumbers")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addNumbers", targetNamespace = "http://ws.fillo.sk/", className = "sk.fillo.ws.consumer.def.AddNumbers")
-    @ResponseWrapper(localName = "addNumbersResponse", targetNamespace = "http://ws.fillo.sk/", className = "sk.fillo.ws.consumer.def.AddNumbersResponse")
-    @Action(input = "addNumbers", output = "http://ws.fillo.sk/Service/addNumbersResponse")
+    @RequestWrapper(localName = "addNumbers", targetNamespace = "http://provider.ws.fillo.sk/", className = "sk.fillo.ws.consumer.def.AddNumbers")
+    @ResponseWrapper(localName = "addNumbersResponse", targetNamespace = "http://provider.ws.fillo.sk/", className = "sk.fillo.ws.consumer.def.AddNumbersResponse")
+    @Action(input = "addNumbers", output = "http://provider.ws.fillo.sk/Service/addNumbersResponse")
     public int addNumbers(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,

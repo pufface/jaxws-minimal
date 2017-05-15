@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AddNumbers_QNAME = new QName("http://ws.fillo.sk/", "addNumbers");
-    private final static QName _AddNumbersResponse_QNAME = new QName("http://ws.fillo.sk/", "addNumbersResponse");
+    private final static QName _AddNumbers_QNAME = new QName("http://provider.ws.fillo.sk/", "addNumbers");
+    private final static QName _AddNumbersResponse_QNAME = new QName("http://provider.ws.fillo.sk/", "addNumbersResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: sk.fillo.ws.consumer.def
@@ -54,7 +54,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbers }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.fillo.sk/", name = "addNumbers")
+    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "addNumbers")
     public JAXBElement<AddNumbers> createAddNumbers(AddNumbers value) {
         return new JAXBElement<AddNumbers>(_AddNumbers_QNAME, AddNumbers.class, null, value);
     }
@@ -63,7 +63,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbersResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.fillo.sk/", name = "addNumbersResponse")
+    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "addNumbersResponse")
     public JAXBElement<AddNumbersResponse> createAddNumbersResponse(AddNumbersResponse value) {
         return new JAXBElement<AddNumbersResponse>(_AddNumbersResponse_QNAME, AddNumbersResponse.class, null, value);
     }

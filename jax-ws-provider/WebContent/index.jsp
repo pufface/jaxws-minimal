@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JAX-WS-MINIMAL</title>
+<title>JAX-WS Provider</title>
 </head>
 <body>
 	<h1>JAX-WS Provider</h1>

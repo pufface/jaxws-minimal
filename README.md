@@ -3,9 +3,6 @@
 Minimal demo for run JAX WS on Tomcat and Websphere with same codebase.
 No additional dependencies needed, except one lib for Tomcat runtime.
 
-http://memorynotfound.com/category/java/jax-ws/
-http://ics.upjs.sk/~novotnyr/blog/2068/deploying-jax-ws-services-on-java-7-and-tomcat-7
-
 Build jars: `$gradle clean jar`
 Build wars: `$gradle clean build`
 Eclipse project: `$gradle cleanEclipse eclipse`
@@ -15,15 +12,13 @@ Prereq and tested on:
 - WebSphere 8.0.0.5 with JDK 6
 - Gradle 3.4
 
-// TODO binding logger
-// TODO client ws provider interface (log messages)
-// TODO readme endpoints
-
 ## JAX-WS-PROVIDER
 
-Run standalone: `$java -jar jax-ws-provider.jar`
-Run Tomcat: copy tomcat/lib/webservices-rt-2.3.1.jar to <TOMCAT_HOME>/lib older
-Run WebSphere: just deploy and run
+Standalone: `$java -jar jax-ws-provider.jar` http://localhost:8888/jax-ws-provider/TimeServiceService
+
+Tomcat: http://localhost:8080/jax-ws-provider/TimeServiceService
+
+WebSphere: http://localhost:10039/jax-ws-provider/TimeServiceService
 
 Generate WSDL from Java: `$run_wsgen.bat`
 
@@ -32,13 +27,16 @@ Tomcat additional dependecy:
 - GlassFish Metro is standalone web service opensource implemtation
   Contains JAXB RI, JAX-WS RI, SAAJ RI, StAX (SJSXP) and WSIT
 - org.glassfish.metro:webservices-rt:2.3.1
+- copy tomcat/lib/webservices-rt-2.3.1.jar to <TOMCAT_HOME>/lib folder
 
 
 ## JAX-WS-CONSUMER
 
-Run standalone: `$java -jar jax-ws-consumer.jar`
-Run Tomcat: just deploy and run
-Run WebSphere: just deploy and run
+Standalone: `$java -jar jax-ws-consumer.jar`
+
+Tomcat: http://localhost:8080/jax-ws-consumer
+
+WebSphere: http://localhost:10039/jax-ws-consumer
 
 Generate Java from WSDL: `$run_wsimport.bat`
 

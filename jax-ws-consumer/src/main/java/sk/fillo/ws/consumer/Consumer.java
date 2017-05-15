@@ -1,14 +1,14 @@
 package sk.fillo.ws.consumer;
 
-import sk.fillo.ws.consumer.def.Service;
+import sk.fillo.ws.consumer.def.TimeService;
 
 public class Consumer {
 
-	private static final String WS_URL = "http://localhost:8888/jax-ws-provider/ws";
+	private static final String WS_URL = "http://localhost:8888/jax-ws-provider/TimeServiceService";
 
 	public static void main(String[] args) {
-		Service service = WsClientFactory.build(WS_URL);
-		int response = service.addNumbers(10, 10);
+		TimeService service = WsClientFactory.build(WS_URL);
+		long response = service.providerTimeMillis();
 		System.out.println("Response: " + response);
 	}
 

@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for addNumbersResponse complex type.
+ * <p>Java class for providerTimeMillisResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="addNumbersResponse">
+ * &lt;complexType name="providerTimeMillisResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,19 +27,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "addNumbersResponse", propOrder = {
+@XmlType(name = "providerTimeMillisResponse", propOrder = {
     "_return"
 })
-public class AddNumbersResponse {
+public class ProviderTimeMillisResponse {
 
     @XmlElement(name = "return")
-    protected int _return;
+    protected long _return;
 
     /**
      * Gets the value of the return property.
      * 
      */
-    public int getReturn() {
+    public long getReturn() {
         return _return;
     }
 
@@ -47,7 +47,7 @@ public class AddNumbersResponse {
      * Sets the value of the return property.
      * 
      */
-    public void setReturn(int value) {
+    public void setReturn(long value) {
         this._return = value;
     }
 

@@ -24,8 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AddNumbers_QNAME = new QName("http://provider.ws.fillo.sk/", "addNumbers");
-    private final static QName _AddNumbersResponse_QNAME = new QName("http://provider.ws.fillo.sk/", "addNumbersResponse");
+    private final static QName _ProviderTimeMillisResponse_QNAME = new QName("http://provider.ws.fillo.sk/", "providerTimeMillisResponse");
+    private final static QName _ProviderTimeMillis_QNAME = new QName("http://provider.ws.fillo.sk/", "providerTimeMillis");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: sk.fillo.ws.consumer.def
@@ -35,37 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddNumbers }
+     * Create an instance of {@link ProviderTimeMillis }
      * 
      */
-    public AddNumbers createAddNumbers() {
-        return new AddNumbers();
+    public ProviderTimeMillis createProviderTimeMillis() {
+        return new ProviderTimeMillis();
     }
 
     /**
-     * Create an instance of {@link AddNumbersResponse }
+     * Create an instance of {@link ProviderTimeMillisResponse }
      * 
      */
-    public AddNumbersResponse createAddNumbersResponse() {
-        return new AddNumbersResponse();
+    public ProviderTimeMillisResponse createProviderTimeMillisResponse() {
+        return new ProviderTimeMillisResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbers }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderTimeMillisResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "addNumbers")
-    public JAXBElement<AddNumbers> createAddNumbers(AddNumbers value) {
-        return new JAXBElement<AddNumbers>(_AddNumbers_QNAME, AddNumbers.class, null, value);
+    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "providerTimeMillisResponse")
+    public JAXBElement<ProviderTimeMillisResponse> createProviderTimeMillisResponse(ProviderTimeMillisResponse value) {
+        return new JAXBElement<ProviderTimeMillisResponse>(_ProviderTimeMillisResponse_QNAME, ProviderTimeMillisResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbersResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProviderTimeMillis }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "addNumbersResponse")
-    public JAXBElement<AddNumbersResponse> createAddNumbersResponse(AddNumbersResponse value) {
-        return new JAXBElement<AddNumbersResponse>(_AddNumbersResponse_QNAME, AddNumbersResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://provider.ws.fillo.sk/", name = "providerTimeMillis")
+    public JAXBElement<ProviderTimeMillis> createProviderTimeMillis(ProviderTimeMillis value) {
+        return new JAXBElement<ProviderTimeMillis>(_ProviderTimeMillis_QNAME, ProviderTimeMillis.class, null, value);
     }
 
 }

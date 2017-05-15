@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-	<system systemId="http://localhost/wsdl/ServiceService.wsdl" uri="wsdl/ServiceService.wsdl" />
+	<system systemId="http://localhost/wsdl/TimeServiceService.wsdl" uri="wsdl/TimeServiceService.wsdl" />
 </catalog>

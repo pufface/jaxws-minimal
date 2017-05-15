@@ -5,7 +5,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 @WebService
-@HandlerChain(file="handler-chain.xml")
+@HandlerChain(file="/handler-chain.xml")
 public class TimeService {
 
 	@WebMethod

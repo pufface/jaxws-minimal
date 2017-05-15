@@ -8,6 +8,7 @@ public class Consumer {
 
 	public static void main(String[] args) {
 		TimeService service = WsClientFactory.build(WS_URL);
+		System.out.println("Calling ws: " + WS_URL);
 		long response = service.providerTimeMillis();
 		System.out.println("Response: " + response);
 	}

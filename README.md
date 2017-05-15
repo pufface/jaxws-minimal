@@ -16,12 +16,12 @@ Prereq and tested on:
 - Gradle 3.4
 
 // TODO binding logger
-// TODO Test tomcat 7 on JDK 6
 // TODO client ws provider interface (log messages)
+// TODO readme endpoints
 
 ## JAX-WS-PROVIDER
 
-Run standalone: `$java -jar build\libs\jax-ws-provider.jar`
+Run standalone: `$java -jar jax-ws-provider.jar`
 Run Tomcat: copy tomcat/lib/webservices-rt-2.3.1.jar to <TOMCAT_HOME>/lib older
 Run WebSphere: just deploy and run
 
@@ -36,7 +36,7 @@ Tomcat additional dependecy:
 
 ## JAX-WS-CONSUMER
 
-Run standalone: `$java -jar build\libs\jax-ws-consumer.jar`
+Run standalone: `$java -jar jax-ws-consumer.jar`
 Run Tomcat: just deploy and run
 Run WebSphere: just deploy and run
 

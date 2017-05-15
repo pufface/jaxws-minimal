@@ -9,7 +9,7 @@ project.webAppDirName = 'WebContent'
 
 jar {
 	manifest {
-		attributes 'Main-Class': 'sk.fillo.ws.provider.Consumer'
+		attributes 'Main-Class': 'sk.fillo.ws.consumer.Consumer'
 	}
 	from {
 		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

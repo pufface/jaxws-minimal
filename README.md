@@ -29,7 +29,6 @@ Tomcat additional dependecy:
 - **org.glassfish.metro:webservices-rt:2.3.1**
 - copy tomcat/lib/webservices-rt-2.3.1.jar to <TOMCAT_HOME>/lib folder
 
-
 ## JAX-WS-CONSUMER
 
 Standalone: `$java -jar jax-ws-consumer.jar`
@@ -44,3 +43,43 @@ Pack WSDL to archive, no dependency on WSDL location:
 - use wsdlLocation URI: `http://localhost/wsdl/Service.wsdl`
 - map URI to local wsdl via: `jax-ws-catalog.xml`
 - put catalog and wsdl to `src/main/resources/META-INF`
+
+## JAX-WS-PROVIDER URL ENDPOINTS
+- configuration for Tomcat via `WEB-INF/sun-jaxws.xml`
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+	<endpoint name="TimeService" url-pattern="/ws/TimeService"
+		implementation="sk.fillo.ws.provider.TimeService" />
+</endpoints>
+```
+
+- configuration for Websphere 8.0 via `WEB-INF/web.xml` servlet configuration (is not really a servlet, but IBM magic for configure URL)
+```xml
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<!-- TIME SERVICE - JAX WS URL FOR WEBSPHERE 8.0 -->
+	<servlet>
+		<servlet-name>TestService</servlet-name>
+		<servlet-class>sk.fillo.ws.provider.TimeService</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestService</servlet-name>
+		<url-pattern>/ws/TimeService</url-pattern>
+	</servlet-mapping>
+</web-app>
+```
+
+- configuration for Websphere 8.5 via `WEB-INF/ibm-ws-bnd.xml`
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<webservices-bnd xmlns="http://websphere.ibm.com/xml/ns/javaee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee http://websphere.ibm.com/xml/ns/javaee/ibm-ws-bnd_1_0.xsd" 
+  version="1.0">
+  <!-- TIME SERVICE - JAX WS URL FOR WEBSPHERE 8.5 -->
+  <webservice-endpoint port-component-name="TimeService" address="/ws/TimeService" />
+</webservices-bnd>
+```
